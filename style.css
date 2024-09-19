@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color:antiquewhite;
     color: #333;
 }
 
@@ -64,6 +64,23 @@ nav ul li a:active {
 
 main {
     padding: 20px;
+    background-color: antiquewhite;
+    display: grid;
+    place-items: center;
+    animation: fadeIn 2s ease-in;
+}
+
+section#home {
+    text-align: center;
+}
+
+section#home h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+section#home p {
+    font-size: 1.2em;
 }
 
 h2 {
@@ -96,14 +113,20 @@ p {
 }
 
 #search-button {
-    background: #f75235;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    color: white;
-    transition: background-color 0.3s ease;
-    margin-left: 10px;
+    
+     background-color: #555;
+     color: white;
+      border: none;
+     padding: 5px 10px;
+     border-radius: 5px;
+      cursor: pointer;
+     transition: background-color 0.3s ease, transform 0.3s ease;
+    
+}
+
+#search-button:hover {
+    background-color: #444;
+    transform: scale(1.1);
 }
 
 #search-button i {
@@ -126,4 +149,164 @@ p {
         gap: 10px;
     }
 }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.logo h1 {
+    animation: bounce 2s ease-in-out;
+}
+
+
+nav {
+    animation: slideIn 1s ease-out;
+}
+
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  img {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+  
+  img.loaded {
+    opacity: 1;
+  }
+  .nav-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+  
+  .nav-menu.open {
+    max-height: 200px; 
+  }
+  .card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  /* Estilo para a seção de introdução */
+.intro {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+}
+
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.info-item {
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 10px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.info-item i {
+    font-size: 2em;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.info-item h4 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.info-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+    
+  
 
